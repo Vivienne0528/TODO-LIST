@@ -1,4 +1,5 @@
 import Todo from "@/components/todo";
+import TodoList from "@/components/todoList";
 
 export default function Home() {
 
@@ -26,28 +27,8 @@ export default function Home() {
           </button>
         </section>
 
-        <section className="carousel carousel-vertical rounded-box h-96">
-          <section className="flex flex-col  carousel-item h-full">
-            <Todo todo={"Read the book(at least 5 pages"} />
-            <Todo todo={"Read the book(at least 5 pages"} />
-            <Todo todo={"nihao"} />
-            <Todo todo={"nihao"} />
-            <Todo todo={"nihao"} />
-            <Todo todo={"nihao"} />
-            <Todo todo={"Read the book(at least 5 pages"} />
+        <Todo />
 
-          </section>
-          <section className="flex flex-col  carousel-item h-full">
-            <Todo todo={"Read the book(at least 5 pages"} />
-            <Todo todo={"Read the book(at least 5 pages"} />
-            <Todo todo={"nihao"} />
-            <Todo todo={"nihao"} />
-            <Todo todo={"nihao"} />
-            <Todo todo={"nihao"} />
-            <Todo todo={"Read the book(at least 5 pages"} />
-          </section>
-
-        </section>
         <button className="btn btn-wide text-white bg-[#4E9CC0] m-5">
           Remove checked
           <svg
@@ -62,6 +43,5 @@ export default function Home() {
         </button>
       </section>
     </main>
-
   );
 }
