@@ -462,7 +462,7 @@ function triggerUpdate(msg) {
     }
 }
 }}),
-"[project]/src/components/edit/index.tsx [client] (ecmascript)": ((__turbopack_context__) => {
+"[project]/src/components/todo/index.tsx [client] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
 var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_context__;
@@ -475,7 +475,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$ind
 ;
 var _s = __turbopack_context__.k.signature();
 ;
-const Edit = ({ todo })=>{
+const Todo = ({ todo })=>{
     _s();
     const [isCompleted, setIsCompleted] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(false);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -491,19 +491,19 @@ const Edit = ({ todo })=>{
                             className: "checkbox border-[#4E9CC0] bg-white checked:bg-[#4E9CC0] checked:text-white checked:border-white m-[0.4rem] ",
                             onChange: ()=>setIsCompleted(!isCompleted)
                         }, void 0, false, {
-                            fileName: "[project]/src/components/edit/index.tsx",
+                            fileName: "[project]/src/components/todo/index.tsx",
                             lineNumber: 14,
                             columnNumber: 21
                         }, this),
                         todo
                     ]
                 }, void 0, true, {
-                    fileName: "[project]/src/components/edit/index.tsx",
+                    fileName: "[project]/src/components/todo/index.tsx",
                     lineNumber: 13,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
-                fileName: "[project]/src/components/edit/index.tsx",
+                fileName: "[project]/src/components/todo/index.tsx",
                 lineNumber: 11,
                 columnNumber: 13
             }, this),
@@ -521,17 +521,17 @@ const Edit = ({ todo })=>{
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                                 d: "M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z"
                             }, void 0, false, {
-                                fileName: "[project]/src/components/edit/index.tsx",
+                                fileName: "[project]/src/components/todo/index.tsx",
                                 lineNumber: 21,
                                 columnNumber: 128
                             }, this)
                         }, void 0, false, {
-                            fileName: "[project]/src/components/edit/index.tsx",
+                            fileName: "[project]/src/components/todo/index.tsx",
                             lineNumber: 21,
                             columnNumber: 21
                         }, this)
                     }, void 0, false, {
-                        fileName: "[project]/src/components/edit/index.tsx",
+                        fileName: "[project]/src/components/todo/index.tsx",
                         lineNumber: 20,
                         columnNumber: 17
                     }, this),
@@ -546,38 +546,38 @@ const Edit = ({ todo })=>{
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                                 d: "m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
                             }, void 0, false, {
-                                fileName: "[project]/src/components/edit/index.tsx",
+                                fileName: "[project]/src/components/todo/index.tsx",
                                 lineNumber: 24,
                                 columnNumber: 128
                             }, this)
                         }, void 0, false, {
-                            fileName: "[project]/src/components/edit/index.tsx",
+                            fileName: "[project]/src/components/todo/index.tsx",
                             lineNumber: 24,
                             columnNumber: 21
                         }, this)
                     }, void 0, false, {
-                        fileName: "[project]/src/components/edit/index.tsx",
+                        fileName: "[project]/src/components/todo/index.tsx",
                         lineNumber: 23,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
-                fileName: "[project]/src/components/edit/index.tsx",
+                fileName: "[project]/src/components/todo/index.tsx",
                 lineNumber: 19,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
-        fileName: "[project]/src/components/edit/index.tsx",
+        fileName: "[project]/src/components/todo/index.tsx",
         lineNumber: 10,
         columnNumber: 9
     }, this);
 };
-_s(Edit, "LITZRDMGs9gT4S6K0mtRu7r05aI=");
-_c = Edit;
-const __TURBOPACK__default__export__ = Edit;
+_s(Todo, "LITZRDMGs9gT4S6K0mtRu7r05aI=");
+_c = Todo;
+const __TURBOPACK__default__export__ = Todo;
 var _c;
-__turbopack_context__.k.register(_c, "Edit");
+__turbopack_context__.k.register(_c, "Todo");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(module, globalThis.$RefreshHelpers$);
 }
@@ -591,71 +591,231 @@ __turbopack_context__.s({
     "default": (()=>Home)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react/jsx-dev-runtime.js [client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$edit$2f$index$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/edit/index.tsx [client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$todo$2f$index$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/todo/index.tsx [client] (ecmascript)");
 ;
 ;
 function Home() {
-    return(// <main className="bg-[#4E9CC0] h-screen m-0 p-0 flex flex-col">
-    //   <section className="bg-white m-2 flex flex-col justify-center items-center h-full md:!m-10 ">
-    //     <h1 className="text-[3rem] text-[#4E9CC0]">TODOLIST</h1>
-    //     <section className="flex justify-between items-center gap-2 w-85 md:w-170 ">
-    //       <input
-    //         type="text"
-    //         className="border-[#4E9CC0] border-1 text-center w-150 h-10 text-[#4E9CC0]"
-    //         placeholder="What needs to be done?"
-    //       />
-    //       <button className="btn btn-square">
-    //         <svg
-    //           className="bg-[#4E9CC0]"
-    //           xmlns="http://www.w3.org/2000/svg"
-    //           height="40px"
-    //           viewBox="0 -960 960 960"
-    //           width="40px"
-    //           fill="white"
-    //         >
-    //           <path d="M450-450H200v-60h250v-250h60v250h250v60H510v250h-60v-250Z" />
-    //         </svg>
-    //       </button>
-    //     </section>
-    //     <section className="carousel carousel-vertical rounded-box h-96">
-    //       <section className="flex flex-col  carousel-item h-full">
-    //         <Edit todo={"Read the book(at least 5 pages"} />
-    //         <Edit todo={"Read the book(at least 5 pages"} />
-    //         <Edit todo={"nihao"} />
-    //         <Edit todo={"nihao"} />
-    //         <Edit todo={"nihao"} />
-    //         <Edit todo={"nihao"} />
-    //         <Edit todo={"Read the book(at least 5 pages"} />
-    //       </section>
-    //       <section className="flex flex-col  carousel-item h-full">
-    //         <Edit todo={"Read the book(at least 5 pages"} />
-    //         <Edit todo={"Read the book(at least 5 pages"} />
-    //         <Edit todo={"nihao"} />
-    //         <Edit todo={"nihao"} />
-    //         <Edit todo={"nihao"} />
-    //         <Edit todo={"nihao"} />
-    //         <Edit todo={"Read the book(at least 5 pages"} />
-    //       </section>
-    //     </section>
-    //     <button className="btn btn-wide text-white bg-[#4E9CC0] m-5">
-    //       Remove checked
-    //       <svg
-    //         xmlns="http://www.w3.org/2000/svg"
-    //         height="24px"
-    //         viewBox="0 -960 960 960"
-    //         width="24px"
-    //         fill="#FFFFFF"
-    //       >
-    //         <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
-    //       </svg>
-    //     </button>
-    //   </section>
-    // </main>
-    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$edit$2f$index$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
+        className: "bg-[#4E9CC0] h-screen m-0 p-0 flex flex-col",
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+            className: "bg-white m-2 flex flex-col justify-center items-center h-full md:!m-10 ",
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
+                    className: "text-[3rem] text-[#4E9CC0]",
+                    children: "TODOLIST"
+                }, void 0, false, {
+                    fileName: "[project]/src/pages/index.tsx",
+                    lineNumber: 8,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+                    className: "flex justify-between items-center gap-2 w-85 md:w-170 ",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                            type: "text",
+                            className: "border-[#4E9CC0] border-1 text-center w-150 h-10 text-[#4E9CC0]",
+                            placeholder: "What needs to be done?"
+                        }, void 0, false, {
+                            fileName: "[project]/src/pages/index.tsx",
+                            lineNumber: 10,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                            className: "btn btn-square",
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                className: "bg-[#4E9CC0]",
+                                xmlns: "http://www.w3.org/2000/svg",
+                                height: "40px",
+                                viewBox: "0 -960 960 960",
+                                width: "40px",
+                                fill: "white",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                    d: "M450-450H200v-60h250v-250h60v250h250v60H510v250h-60v-250Z"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/pages/index.tsx",
+                                    lineNumber: 24,
+                                    columnNumber: 15
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/src/pages/index.tsx",
+                                lineNumber: 16,
+                                columnNumber: 13
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "[project]/src/pages/index.tsx",
+                            lineNumber: 15,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/src/pages/index.tsx",
+                    lineNumber: 9,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+                    className: "carousel carousel-vertical rounded-box h-96",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+                            className: "flex flex-col  carousel-item h-full",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$todo$2f$index$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {
+                                    todo: "Read the book(at least 5 pages"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/pages/index.tsx",
+                                    lineNumber: 31,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$todo$2f$index$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {
+                                    todo: "Read the book(at least 5 pages"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/pages/index.tsx",
+                                    lineNumber: 32,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$todo$2f$index$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {
+                                    todo: "nihao"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/pages/index.tsx",
+                                    lineNumber: 33,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$todo$2f$index$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {
+                                    todo: "nihao"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/pages/index.tsx",
+                                    lineNumber: 34,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$todo$2f$index$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {
+                                    todo: "nihao"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/pages/index.tsx",
+                                    lineNumber: 35,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$todo$2f$index$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {
+                                    todo: "nihao"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/pages/index.tsx",
+                                    lineNumber: 36,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$todo$2f$index$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {
+                                    todo: "Read the book(at least 5 pages"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/pages/index.tsx",
+                                    lineNumber: 37,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/src/pages/index.tsx",
+                            lineNumber: 30,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+                            className: "flex flex-col  carousel-item h-full",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$todo$2f$index$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {
+                                    todo: "Read the book(at least 5 pages"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/pages/index.tsx",
+                                    lineNumber: 41,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$todo$2f$index$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {
+                                    todo: "Read the book(at least 5 pages"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/pages/index.tsx",
+                                    lineNumber: 42,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$todo$2f$index$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {
+                                    todo: "nihao"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/pages/index.tsx",
+                                    lineNumber: 43,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$todo$2f$index$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {
+                                    todo: "nihao"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/pages/index.tsx",
+                                    lineNumber: 44,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$todo$2f$index$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {
+                                    todo: "nihao"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/pages/index.tsx",
+                                    lineNumber: 45,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$todo$2f$index$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {
+                                    todo: "nihao"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/pages/index.tsx",
+                                    lineNumber: 46,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$todo$2f$index$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {
+                                    todo: "Read the book(at least 5 pages"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/pages/index.tsx",
+                                    lineNumber: 47,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/src/pages/index.tsx",
+                            lineNumber: 40,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/src/pages/index.tsx",
+                    lineNumber: 29,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                    className: "btn btn-wide text-white bg-[#4E9CC0] m-5",
+                    children: [
+                        "Remove checked",
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                            xmlns: "http://www.w3.org/2000/svg",
+                            height: "24px",
+                            viewBox: "0 -960 960 960",
+                            width: "24px",
+                            fill: "#FFFFFF",
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                d: "m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+                            }, void 0, false, {
+                                fileName: "[project]/src/pages/index.tsx",
+                                lineNumber: 60,
+                                columnNumber: 13
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "[project]/src/pages/index.tsx",
+                            lineNumber: 53,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/src/pages/index.tsx",
+                    lineNumber: 51,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "[project]/src/pages/index.tsx",
+            lineNumber: 7,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
         fileName: "[project]/src/pages/index.tsx",
-        lineNumber: 66,
+        lineNumber: 6,
         columnNumber: 5
-    }, this));
+    }, this);
 }
 _c = Home;
 var _c;
@@ -694,4 +854,4 @@ __turbopack_context__.r("[next]/entry/page-loader.ts { PAGE => \"[project]/src/p
 }}),
 }]);
 
-//# sourceMappingURL=%5Broot-of-the-server%5D__a2e6161a._.js.map
+//# sourceMappingURL=%5Broot-of-the-server%5D__296e1751._.js.map
