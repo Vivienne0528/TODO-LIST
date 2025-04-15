@@ -1,8 +1,18 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 export default function Home() {
   const [todos, setTodos] = useState([]);
   const [input, setInput] = useState("");
+  const [editedId, setEditedId] = useState("");
+  const [newEditedInput, setNewEditedInput] = useState("");
+
+  const editInputRef = useRef(null);
+
+  useEffect(() => {
+    if (editedId !== "" && editInputRef.current) {
+      editInputRef.current.focus();
+    }
+  }, [editedId]);
 
   useEffect(() => {
     const getTodoList = async () => {
@@ -89,7 +99,46 @@ export default function Home() {
                   className="flex justify-between items-center"
                 >
                   <section className="flex">
-                    <label
+                    {editedId === todo.id ? (
+                      <section className="flex justify-center items-center">
+                        <input
+                          type="checkbox"
+                          checked={todo.completed}
+                          className="checkbox border-[#4E9CC0] bg-white checked:bg-[#4E9CC0] checked:text-white checked:border-white m-[0.4rem] "
+                          onChange={() => toggleCompleted(todo.id)}
+                        />
+                        <input
+                          ref={editInputRef}
+                          onChange={(e) => {
+                            setNewEditedInput(e.target.value);
+                          }}
+                          onBlur={() => setEditedId("")}
+                          onKeyDown={(e) => {
+                            if (e.key === "Enter") {
+                              setEditedId("");
+                            }
+                          }}
+                          type="text"
+                          value={newEditedInput}
+                          className=" text-[#4E9CC0] text-[1rem] md:text-[2rem] border-[#4E9CC0] "
+                        />
+                      </section>
+                    ) : (
+                      <label
+                        className={`${
+                          todo.completed ? "line-through" : ""
+                        } text-[#4E9CC0] text-[1rem] md:text-[2rem]`}
+                      >
+                        <input
+                          type="checkbox"
+                          checked={todo.completed}
+                          className="checkbox border-[#4E9CC0] bg-white checked:bg-[#4E9CC0] checked:text-white checked:border-white m-[0.4rem] "
+                          onChange={() => toggleCompleted(todo.id)}
+                        />
+                        {todo.title}
+                      </label>
+                    )}
+                    {/* <label
                       className={`${
                         todo.completed ? "line-through" : ""
                       } text-[#4E9CC0] text-[1rem] md:text-[2rem]`}
@@ -101,10 +150,19 @@ export default function Home() {
                         onChange={() => toggleCompleted(todo.id)}
                       />
                       {todo.title}
-                    </label>
+                    </label> */}
                   </section>
                   <section className="flex gap-1 justify-center items-center">
-                    <button className="btn btn-square bg-white border-[#4E9CC0] h-8 w-8">
+                    <button
+                      onClick={() => {
+                        //在你点击按钮的那一刻，这个 <input /> 元素还没有被渲染成页面上的真实 DOM 节点，editInputRef.current 是 null。
+                        // 要用useEffect.
+                        // editInputRef.current.focus();
+                        setEditedId(todo.id);
+                        setNewEditedInput(todo.title);
+                      }}
+                      className="btn btn-square bg-white border-[#4E9CC0] h-8 w-8"
+                    >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         height="24px"
