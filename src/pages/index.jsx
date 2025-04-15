@@ -59,6 +59,17 @@ export default function Home() {
       )
     );
   };
+  const handleSave = () => {
+    if (editedId !== "") {
+      setTodos((prev) =>
+        prev.map((todo) =>
+          todo.id === editedId ? { ...todo, title: newEditedInput } : todo
+        )
+      );
+      setEditedId("");
+      setNewEditedInput("");
+    }
+  };
 
   return (
     <main className="bg-[#4E9CC0] h-screen m-0 p-0 flex flex-col">
@@ -112,10 +123,10 @@ export default function Home() {
                           onChange={(e) => {
                             setNewEditedInput(e.target.value);
                           }}
-                          onBlur={() => setEditedId("")}
+                          onBlur={handleSave}
                           onKeyDown={(e) => {
                             if (e.key === "Enter") {
-                              setEditedId("");
+                              handleSave();
                             }
                           }}
                           type="text"

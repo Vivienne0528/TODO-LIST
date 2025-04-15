@@ -538,6 +538,16 @@ function Home() {
                     completed: !todo.completed
                 } : todo));
     };
+    const handleSave = ()=>{
+        if (editedId !== "") {
+            setTodos((prev)=>prev.map((todo)=>todo.id === editedId ? {
+                        ...todo,
+                        title: newEditedInput
+                    } : todo));
+            setEditedId("");
+            setNewEditedInput("");
+        }
+    };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
         className: "bg-[#4E9CC0] h-screen m-0 p-0 flex flex-col",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -548,7 +558,7 @@ function Home() {
                     children: "TODOLIST"
                 }, void 0, false, {
                     fileName: "[project]/src/pages/index.jsx",
-                    lineNumber: 66,
+                    lineNumber: 77,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -563,7 +573,7 @@ function Home() {
                             placeholder: "What needs to be done?"
                         }, void 0, false, {
                             fileName: "[project]/src/pages/index.jsx",
-                            lineNumber: 71,
+                            lineNumber: 82,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -579,23 +589,23 @@ function Home() {
                                     d: "M450-450H200v-60h250v-250h60v250h250v60H510v250h-60v-250Z"
                                 }, void 0, false, {
                                     fileName: "[project]/src/pages/index.jsx",
-                                    lineNumber: 87,
+                                    lineNumber: 98,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/pages/index.jsx",
-                                lineNumber: 79,
+                                lineNumber: 90,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/pages/index.jsx",
-                            lineNumber: 78,
+                            lineNumber: 89,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/pages/index.jsx",
-                    lineNumber: 67,
+                    lineNumber: 78,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -619,7 +629,7 @@ function Home() {
                                                         onChange: ()=>toggleCompleted(todo.id)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/pages/index.jsx",
-                                                        lineNumber: 104,
+                                                        lineNumber: 115,
                                                         columnNumber: 25
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -627,10 +637,10 @@ function Home() {
                                                         onChange: (e)=>{
                                                             setNewEditedInput(e.target.value);
                                                         },
-                                                        onBlur: ()=>setEditedId(""),
+                                                        onBlur: handleSave,
                                                         onKeyDown: (e)=>{
                                                             if (e.key === "Enter") {
-                                                                setEditedId("");
+                                                                handleSave();
                                                             }
                                                         },
                                                         type: "text",
@@ -638,13 +648,13 @@ function Home() {
                                                         className: " text-[#4E9CC0] text-[1rem] md:text-[2rem] border-[#4E9CC0] "
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/pages/index.jsx",
-                                                        lineNumber: 110,
+                                                        lineNumber: 121,
                                                         columnNumber: 25
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/pages/index.jsx",
-                                                lineNumber: 103,
+                                                lineNumber: 114,
                                                 columnNumber: 23
                                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                                 className: `${todo.completed ? "line-through" : ""} text-[#4E9CC0] text-[1rem] md:text-[2rem]`,
@@ -656,19 +666,19 @@ function Home() {
                                                         onChange: ()=>toggleCompleted(todo.id)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/pages/index.jsx",
-                                                        lineNumber: 132,
+                                                        lineNumber: 143,
                                                         columnNumber: 25
                                                     }, this),
                                                     todo.title
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/pages/index.jsx",
-                                                lineNumber: 127,
+                                                lineNumber: 138,
                                                 columnNumber: 23
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/pages/index.jsx",
-                                            lineNumber: 101,
+                                            lineNumber: 112,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -693,17 +703,17 @@ function Home() {
                                                             d: "M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/pages/index.jsx",
-                                                            lineNumber: 173,
+                                                            lineNumber: 184,
                                                             columnNumber: 25
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/pages/index.jsx",
-                                                        lineNumber: 166,
+                                                        lineNumber: 177,
                                                         columnNumber: 23
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/pages/index.jsx",
-                                                    lineNumber: 156,
+                                                    lineNumber: 167,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -719,44 +729,44 @@ function Home() {
                                                             d: "m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/pages/index.jsx",
-                                                            lineNumber: 187,
+                                                            lineNumber: 198,
                                                             columnNumber: 25
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/pages/index.jsx",
-                                                        lineNumber: 180,
+                                                        lineNumber: 191,
                                                         columnNumber: 23
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/pages/index.jsx",
-                                                    lineNumber: 176,
+                                                    lineNumber: 187,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/pages/index.jsx",
-                                            lineNumber: 155,
+                                            lineNumber: 166,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, todo.id, true, {
                                     fileName: "[project]/src/pages/index.jsx",
-                                    lineNumber: 97,
+                                    lineNumber: 108,
                                     columnNumber: 17
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/src/pages/index.jsx",
-                            lineNumber: 95,
+                            lineNumber: 106,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/pages/index.jsx",
-                        lineNumber: 94,
+                        lineNumber: 105,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/pages/index.jsx",
-                    lineNumber: 93,
+                    lineNumber: 104,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -774,29 +784,29 @@ function Home() {
                                 d: "m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
                             }, void 0, false, {
                                 fileName: "[project]/src/pages/index.jsx",
-                                lineNumber: 209,
+                                lineNumber: 220,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/pages/index.jsx",
-                            lineNumber: 202,
+                            lineNumber: 213,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/pages/index.jsx",
-                    lineNumber: 197,
+                    lineNumber: 208,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/pages/index.jsx",
-            lineNumber: 65,
+            lineNumber: 76,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/pages/index.jsx",
-        lineNumber: 64,
+        lineNumber: 75,
         columnNumber: 5
     }, this);
 }
