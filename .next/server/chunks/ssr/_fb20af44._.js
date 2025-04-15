@@ -15,6 +15,20 @@ var __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$
 function Home() {
     const [todos, setTodos] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])([]);
     const [input, setInput] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])("");
+    (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useEffect"])(()=>{
+        const getTodoList = async ()=>{
+            const url = "https://jsonplaceholder.typicode.com/todos";
+            // const url = "/todoList.json";
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+                setTodos(data);
+            } catch (error) {
+                console.error(error);
+            }
+        };
+        getTodoList();
+    }, []);
     const handleAddTodo = (e)=>{
         e.preventDefault();
         if (input.length == 0) {
@@ -32,20 +46,12 @@ function Home() {
             ]);
         setInput("");
     };
-    (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useEffect"])(()=>{
-        const getTodoList = async ()=>{
-            const url = "https://jsonplaceholder.typicode.com/todos";
-            // const url = "/todoList.json";
-            try {
-                const response = await fetch(url);
-                const data = await response.json();
-                setTodos(data);
-            } catch (error) {
-                console.error(error);
-            }
-        };
-        getTodoList();
-    }, []);
+    const deleteOneCompleted = (id)=>{
+        setTodos((prevTodos)=>prevTodos.filter((todo)=>todo.id !== id));
+    };
+    const deleteAllCompleted = (id)=>{
+        setTodos((prevTodos)=>prevTodos.filter((todo)=>!todo.completed));
+    };
     const toggleCompleted = (id)=>{
         setTodos((prevTodos)=>prevTodos.map((todo)=>todo.id === id ? {
                     ...todo,
@@ -62,7 +68,7 @@ function Home() {
                     children: "TODOLIST"
                 }, void 0, false, {
                     fileName: "[project]/src/pages/index.jsx",
-                    lineNumber: 48,
+                    lineNumber: 56,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("form", {
@@ -77,7 +83,7 @@ function Home() {
                             placeholder: "What needs to be done?"
                         }, void 0, false, {
                             fileName: "[project]/src/pages/index.jsx",
-                            lineNumber: 53,
+                            lineNumber: 61,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
@@ -93,23 +99,23 @@ function Home() {
                                     d: "M450-450H200v-60h250v-250h60v250h250v60H510v250h-60v-250Z"
                                 }, void 0, false, {
                                     fileName: "[project]/src/pages/index.jsx",
-                                    lineNumber: 69,
+                                    lineNumber: 77,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/pages/index.jsx",
-                                lineNumber: 61,
+                                lineNumber: 69,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/pages/index.jsx",
-                            lineNumber: 60,
+                            lineNumber: 68,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/pages/index.jsx",
-                    lineNumber: 49,
+                    lineNumber: 57,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("section", {
@@ -133,19 +139,19 @@ function Home() {
                                                         onChange: ()=>toggleCompleted(todo.id)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/pages/index.jsx",
-                                                        lineNumber: 89,
+                                                        lineNumber: 97,
                                                         columnNumber: 23
                                                     }, this),
                                                     todo.title
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/pages/index.jsx",
-                                                lineNumber: 84,
+                                                lineNumber: 92,
                                                 columnNumber: 21
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/pages/index.jsx",
-                                            lineNumber: 83,
+                                            lineNumber: 91,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("section", {
@@ -163,20 +169,21 @@ function Home() {
                                                             d: "M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/pages/index.jsx",
-                                                            lineNumber: 107,
+                                                            lineNumber: 115,
                                                             columnNumber: 25
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/pages/index.jsx",
-                                                        lineNumber: 100,
+                                                        lineNumber: 108,
                                                         columnNumber: 23
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/pages/index.jsx",
-                                                    lineNumber: 99,
+                                                    lineNumber: 107,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
+                                                    onClick: ()=>deleteOneCompleted(todo.id),
                                                     className: "btn btn-square  bg-white border-[#4E9CC0]  h-8 w-8",
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("svg", {
                                                         xmlns: "http://www.w3.org/2000/svg",
@@ -188,47 +195,48 @@ function Home() {
                                                             d: "m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/pages/index.jsx",
-                                                            lineNumber: 118,
+                                                            lineNumber: 129,
                                                             columnNumber: 25
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/pages/index.jsx",
-                                                        lineNumber: 111,
+                                                        lineNumber: 122,
                                                         columnNumber: 23
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/pages/index.jsx",
-                                                    lineNumber: 110,
+                                                    lineNumber: 118,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/pages/index.jsx",
-                                            lineNumber: 98,
+                                            lineNumber: 106,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, todo.id, true, {
                                     fileName: "[project]/src/pages/index.jsx",
-                                    lineNumber: 79,
+                                    lineNumber: 87,
                                     columnNumber: 17
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/src/pages/index.jsx",
-                            lineNumber: 77,
+                            lineNumber: 85,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/pages/index.jsx",
-                        lineNumber: 76,
+                        lineNumber: 84,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/pages/index.jsx",
-                    lineNumber: 75,
+                    lineNumber: 83,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
+                    onClick: deleteAllCompleted,
                     className: "btn btn-wide text-white bg-[#4E9CC0] m-5",
                     children: [
                         "Remove checked",
@@ -242,29 +250,29 @@ function Home() {
                                 d: "m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
                             }, void 0, false, {
                                 fileName: "[project]/src/pages/index.jsx",
-                                lineNumber: 137,
+                                lineNumber: 151,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/pages/index.jsx",
-                            lineNumber: 130,
+                            lineNumber: 144,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/pages/index.jsx",
-                    lineNumber: 128,
+                    lineNumber: 139,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/pages/index.jsx",
-            lineNumber: 47,
+            lineNumber: 55,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/pages/index.jsx",
-        lineNumber: 46,
+        lineNumber: 54,
         columnNumber: 5
     }, this);
 }
