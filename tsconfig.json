@@ -17,6 +17,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/example/index.jsx", "src/components/todo/index.jsx", "src/components/todoList/index.tsx", "src/pages/index.tsx", "src/components/inputTodo/index.tsx", "src/utils/useUtils.tsx", "src/utils/useRequest.jsx", "src/utils/useRequest.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/example/index.jsx", "src/components/todo/index.jsx", "src/components/todoList/index.jsx", "src/pages/index.jsx", "src/components/inputTodo/index.jsx", "src/utils/useUtils.tsx", "src/utils/useRequest.jsx", "src/utils/useRequest.jsx", "src/utils/UseTodoContext.jsx", "src/components/mainPage/index.jsx"],
   "exclude": ["node_modules"]
 }

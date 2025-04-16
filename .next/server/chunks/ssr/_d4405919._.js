@@ -23,20 +23,20 @@ const useUtils = ()=>{
     }, [
         editedId
     ]);
-    (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useEffect"])(()=>{
-        const getTodoList = async ()=>{
-            const url = "https://jsonplaceholder.typicode.com/todos";
-            // const url = "/todoList.json";
-            try {
-                const response = await fetch(url);
-                const data = await response.json();
-                setTodos(data);
-            } catch (error) {
-                console.error(error);
-            }
-        };
-        getTodoList();
-    }, []);
+    // useEffect(() => {
+    //   const getTodoList = async () => {
+    //     const url = "https://jsonplaceholder.typicode.com/todos";
+    //     // const url = "/todoList.json";
+    //     try {
+    //       const response = await fetch(url);
+    //       const data = await response.json();
+    //       setTodos(data);
+    //     } catch (error) {
+    //       console.error(error);
+    //     }
+    //   };
+    //   getTodoList();
+    // }, []);
     const handleAddTodo = (e)=>{
         e.preventDefault();
         if (input.length == 0) {
@@ -128,7 +128,7 @@ const TodoList = ()=>{
                                             onChange: ()=>toggleCompleted(todo.id)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/todoList/index.tsx",
-                                            lineNumber: 18,
+                                            lineNumber: 19,
                                             columnNumber: 21
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("input", {
@@ -147,13 +147,13 @@ const TodoList = ()=>{
                                             className: " text-[#4E9CC0] text-[1rem] md:text-[2rem] border-[#4E9CC0] "
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/todoList/index.tsx",
-                                            lineNumber: 24,
+                                            lineNumber: 25,
                                             columnNumber: 21
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/todoList/index.tsx",
-                                    lineNumber: 17,
+                                    lineNumber: 18,
                                     columnNumber: 19
                                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("label", {
                                     className: `${todo.completed ? "line-through" : ""} text-[#4E9CC0] text-[1rem] md:text-[2rem]`,
@@ -165,19 +165,19 @@ const TodoList = ()=>{
                                             onChange: ()=>toggleCompleted(todo.id)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/todoList/index.tsx",
-                                            lineNumber: 45,
+                                            lineNumber: 46,
                                             columnNumber: 21
                                         }, this),
                                         todo.title
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/todoList/index.tsx",
-                                    lineNumber: 41,
+                                    lineNumber: 42,
                                     columnNumber: 19
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/todoList/index.tsx",
-                                lineNumber: 15,
+                                lineNumber: 16,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("section", {
@@ -202,17 +202,17 @@ const TodoList = ()=>{
                                                 d: "M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/todoList/index.tsx",
-                                                lineNumber: 73,
+                                                lineNumber: 74,
                                                 columnNumber: 21
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/todoList/index.tsx",
-                                            lineNumber: 66,
+                                            lineNumber: 67,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/todoList/index.tsx",
-                                        lineNumber: 56,
+                                        lineNumber: 57,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
@@ -228,44 +228,44 @@ const TodoList = ()=>{
                                                 d: "m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/todoList/index.tsx",
-                                                lineNumber: 87,
+                                                lineNumber: 88,
                                                 columnNumber: 21
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/todoList/index.tsx",
-                                            lineNumber: 80,
+                                            lineNumber: 81,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/todoList/index.tsx",
-                                        lineNumber: 76,
+                                        lineNumber: 77,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/todoList/index.tsx",
-                                lineNumber: 55,
+                                lineNumber: 56,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, todo.id, true, {
                         fileName: "[project]/src/components/todoList/index.tsx",
-                        lineNumber: 11,
+                        lineNumber: 12,
                         columnNumber: 13
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/src/components/todoList/index.tsx",
-                lineNumber: 9,
+                lineNumber: 10,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/components/todoList/index.tsx",
-            lineNumber: 8,
+            lineNumber: 9,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/todoList/index.tsx",
-        lineNumber: 7,
+        lineNumber: 8,
         columnNumber: 5
     }, this);
 };

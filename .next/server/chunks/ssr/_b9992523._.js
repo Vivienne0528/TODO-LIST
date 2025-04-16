@@ -6,11 +6,15 @@ module.exports = {
 var { g: global, __dirname } = __turbopack_context__;
 {
 __turbopack_context__.s({
-    "useUtils": (()=>useUtils)
+    "useTodoContext": (()=>useTodoContext),
+    "useTodoContextProvider": (()=>useTodoContextProvider)
 });
+var __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__ = __turbopack_context__.i("[externals]/react/jsx-dev-runtime [external] (react/jsx-dev-runtime, cjs)");
 var __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__ = __turbopack_context__.i("[externals]/react [external] (react, cjs)");
 ;
-const useUtils = ()=>{
+;
+const useTodoContext = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["createContext"])(null);
+const useTodoContextProvider = ({ children })=>{
     const [todos, setTodos] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])([]);
     const [input, setInput] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])("");
     const [editedId, setEditedId] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])("");
@@ -76,22 +80,107 @@ const useUtils = ()=>{
             setNewEditedInput("");
         }
     };
-    return {
-        input,
-        setInput,
-        todos,
-        editedId,
-        setEditedId,
-        editInputRef,
-        setNewEditedInput,
-        newEditedInput,
-        toggleCompleted,
-        handleAddTodo,
-        handleSave,
-        deleteOneCompleted,
-        deleteAllCompleted
-    };
-};
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(useTodoContext.Provider, {
+        value: {
+            input,
+            setInput,
+            todos,
+            editedId,
+            setEditedId,
+            editInputRef,
+            setNewEditedInput,
+            newEditedInput,
+            toggleCompleted,
+            handleAddTodo,
+            handleSave,
+            deleteOneCompleted,
+            deleteAllCompleted
+        },
+        children: children
+    }, void 0, false, {
+        fileName: "[project]/src/utils/useUtils.jsx",
+        lineNumber: 69,
+        columnNumber: 5
+    }, this);
+}; // export const useUtils = () => {
+ //   const [todos, setTodos] = useState([]);
+ //   const [input, setInput] = useState("");
+ //   const [editedId, setEditedId] = useState("");
+ //   const [newEditedInput, setNewEditedInput] = useState("");
+ //   const editInputRef = useRef(null);
+ //   useEffect(() => {
+ //     if (editedId !== "" && editInputRef.current) {
+ //       editInputRef.current.focus();
+ //     }
+ //   }, [editedId]);
+ //   useEffect(() => {
+ //     const getTodoList = async () => {
+ //       const url = "https://jsonplaceholder.typicode.com/todos";
+ //       // const url = "/todoList.json";
+ //       try {
+ //         const response = await fetch(url);
+ //         const data = await response.json();
+ //         setTodos(data);
+ //       } catch (error) {
+ //         console.error(error);
+ //       }
+ //     };
+ //     getTodoList();
+ //   }, []);
+ //   const handleAddTodo = (e) => {
+ //     e.preventDefault();
+ //     if (input.length == 0) {
+ //       alert("Input cannot be empty.");
+ //       return;
+ //     }
+ //     const newTask = {
+ //       id: Date.now(),
+ //       title: input,
+ //       completed: false,
+ //     };
+ //     setTodos((prevTodos) => [...prevTodos, newTask]);
+ //     setInput("");
+ //   };
+ //   const deleteOneCompleted = (id) => {
+ //     setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
+ //   };
+ //   const deleteAllCompleted = (id) => {
+ //     setTodos((prevTodos) => prevTodos.filter((todo) => !todo.completed));
+ //   };
+ //   const toggleCompleted = (id) => {
+ //     setTodos((prevTodos) =>
+ //       prevTodos.map((todo) =>
+ //         todo.id === id ? { ...todo, completed: !todo.completed } : todo
+ //       )
+ //     );
+ //   };
+ //   const handleSave = () => {
+ //     if (editedId !== "") {
+ //       setTodos((prev) =>
+ //         prev.map((todo) =>
+ //           todo.id === editedId ? { ...todo, title: newEditedInput } : todo
+ //         )
+ //       );
+ //       setEditedId("");
+ //       setNewEditedInput("");
+ //     }
+ //   };
+ //   return {
+ //     input,
+ //     setInput,
+ //     todos,
+ //     editedId,
+ //     setEditedId,
+ //     editInputRef,
+ //     setNewEditedInput,
+ //     newEditedInput,
+ //     toggleCompleted,
+ //     handleAddTodo,
+ //     handleSave,
+ //     deleteOneCompleted,
+ //     deleteAllCompleted,
+ //   };
+ // };
 }}),
 "[project]/src/components/todoList/index.jsx [ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
@@ -130,7 +219,7 @@ const TodoList = ()=>{
                                             onChange: ()=>toggleCompleted(todo.id)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/todoList/index.jsx",
-                                            lineNumber: 19,
+                                            lineNumber: 28,
                                             columnNumber: 21
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("input", {
@@ -149,13 +238,13 @@ const TodoList = ()=>{
                                             className: " text-[#4E9CC0] text-[1rem] md:text-[2rem] border-[#4E9CC0] "
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/todoList/index.jsx",
-                                            lineNumber: 25,
+                                            lineNumber: 34,
                                             columnNumber: 21
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/todoList/index.jsx",
-                                    lineNumber: 18,
+                                    lineNumber: 27,
                                     columnNumber: 19
                                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("label", {
                                     className: `${todo.completed ? "line-through" : ""} text-[#4E9CC0] text-[1rem] md:text-[2rem]`,
@@ -167,19 +256,19 @@ const TodoList = ()=>{
                                             onChange: ()=>toggleCompleted(todo.id)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/todoList/index.jsx",
-                                            lineNumber: 46,
+                                            lineNumber: 56,
                                             columnNumber: 21
                                         }, this),
                                         todo.title
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/todoList/index.jsx",
-                                    lineNumber: 42,
+                                    lineNumber: 51,
                                     columnNumber: 19
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/todoList/index.jsx",
-                                lineNumber: 16,
+                                lineNumber: 25,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("section", {
@@ -204,17 +293,17 @@ const TodoList = ()=>{
                                                 d: "M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/todoList/index.jsx",
-                                                lineNumber: 74,
+                                                lineNumber: 84,
                                                 columnNumber: 21
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/todoList/index.jsx",
-                                            lineNumber: 67,
+                                            lineNumber: 77,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/todoList/index.jsx",
-                                        lineNumber: 57,
+                                        lineNumber: 67,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
@@ -230,44 +319,44 @@ const TodoList = ()=>{
                                                 d: "m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/todoList/index.jsx",
-                                                lineNumber: 88,
+                                                lineNumber: 98,
                                                 columnNumber: 21
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/todoList/index.jsx",
-                                            lineNumber: 81,
+                                            lineNumber: 91,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/todoList/index.jsx",
-                                        lineNumber: 77,
+                                        lineNumber: 87,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/todoList/index.jsx",
-                                lineNumber: 56,
+                                lineNumber: 66,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, todo.id, true, {
                         fileName: "[project]/src/components/todoList/index.jsx",
-                        lineNumber: 12,
+                        lineNumber: 21,
                         columnNumber: 13
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/src/components/todoList/index.jsx",
-                lineNumber: 10,
+                lineNumber: 19,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/components/todoList/index.jsx",
-            lineNumber: 9,
+            lineNumber: 18,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/todoList/index.jsx",
-        lineNumber: 8,
+        lineNumber: 17,
         columnNumber: 5
     }, this);
 };

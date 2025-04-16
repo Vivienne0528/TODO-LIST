@@ -1,7 +1,8 @@
-import { useUtils } from "@/utils/useUtils";
+import { UseTodoContext } from "@/utils/UseTodoContext";
+import { useContext } from "react";
 
 const InputTodo = () => {
-  const { handleAddTodo, input, setInput } = useUtils()
+  const { handleAddTodo, input, setInput } = useContext(UseTodoContext);
   return (
     <form
       onSubmit={handleAddTodo}

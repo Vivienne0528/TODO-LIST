@@ -1,9 +1,19 @@
-
-import { useUtils } from "@/utils/useUtils";
 import React from "react";
+import { UseTodoContext } from "@/utils/UseTodoContext";
+import { useContext } from "react";
 
 const TodoList = () => {
-  const { todos, editedId, newEditedInput, toggleCompleted, editInputRef, setEditedId, setNewEditedInput, deleteOneCompleted, handleSave } = useUtils()
+  const {
+    todos,
+    editedId,
+    newEditedInput,
+    toggleCompleted,
+    editInputRef,
+    setEditedId,
+    setNewEditedInput,
+    deleteOneCompleted,
+    handleSave,
+  } = useContext(UseTodoContext);
   return (
     <section className="carousel carousel-vertical rounded-box h-96 overflow-y-auto">
       <section className="flex flex-col  carousel-item h-auto">
@@ -40,8 +50,9 @@ const TodoList = () => {
                   </section>
                 ) : (
                   <label
-                    className={`${todo.completed ? "line-through" : ""
-                      } text-[#4E9CC0] text-[1rem] md:text-[2rem]`}
+                    className={`${
+                      todo.completed ? "line-through" : ""
+                    } text-[#4E9CC0] text-[1rem] md:text-[2rem]`}
                   >
                     <input
                       type="checkbox"

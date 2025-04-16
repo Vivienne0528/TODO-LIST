@@ -1,10 +1,9 @@
 import TodoList from "@/components/todoList";
 import InputTodo from "@/components/inputTodo";
-import { useUtils } from "@/utils/useUtils";
-
-
-export default function Home() {
-  const { deleteAllCompleted } = useUtils()
+import { UseTodoContext } from "@/utils/UseTodoContext";
+import { useContext } from "react";
+const MainPage = () => {
+  const { deleteAllCompleted } = useContext(UseTodoContext);
   return (
     <main className="bg-[#4E9CC0] h-screen m-0 p-0 flex flex-col">
       <section className="bg-white m-2 flex flex-col justify-center items-center h-full md:!m-10 ">
@@ -30,8 +29,8 @@ export default function Home() {
             <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
           </svg>
         </button>
-
       </section>
     </main>
   );
-}
+};
+export default MainPage;
