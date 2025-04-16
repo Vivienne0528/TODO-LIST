@@ -642,7 +642,167 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$todo$2f
 ;
 ;
 const TodoList = ()=>{
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["Fragment"], {}, void 0, false);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+        className: "carousel carousel-vertical rounded-box h-96 overflow-y-auto",
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+            className: "flex flex-col  carousel-item h-auto",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+                className: "flex flex-col m-0.5 w-85 md:w-170",
+                children: todos.map((todo)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+                        className: "flex justify-between items-center",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+                                className: "flex",
+                                children: editedId === todo.id ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+                                    className: "flex justify-center items-center",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                            type: "checkbox",
+                                            checked: todo.completed,
+                                            className: "checkbox border-[#4E9CC0] bg-white checked:bg-[#4E9CC0] checked:text-white checked:border-white m-[0.4rem] ",
+                                            onChange: ()=>toggleCompleted(todo.id)
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/components/todoList/index.jsx",
+                                            lineNumber: 16,
+                                            columnNumber: 21
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                            ref: editInputRef,
+                                            onChange: (e)=>{
+                                                setNewEditedInput(e.target.value);
+                                            },
+                                            onBlur: handleSave,
+                                            onKeyDown: (e)=>{
+                                                if (e.key === "Enter") {
+                                                    handleSave();
+                                                }
+                                            },
+                                            type: "text",
+                                            value: newEditedInput,
+                                            className: " text-[#4E9CC0] text-[1rem] md:text-[2rem] border-[#4E9CC0] "
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/components/todoList/index.jsx",
+                                            lineNumber: 22,
+                                            columnNumber: 21
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/src/components/todoList/index.jsx",
+                                    lineNumber: 15,
+                                    columnNumber: 19
+                                }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                    className: `${todo.completed ? "line-through" : ""} text-[#4E9CC0] text-[1rem] md:text-[2rem]`,
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                            type: "checkbox",
+                                            checked: todo.completed,
+                                            className: "checkbox border-[#4E9CC0] bg-white checked:bg-[#4E9CC0] checked:text-white checked:border-white m-[0.4rem] ",
+                                            onChange: ()=>toggleCompleted(todo.id)
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/components/todoList/index.jsx",
+                                            lineNumber: 44,
+                                            columnNumber: 21
+                                        }, this),
+                                        todo.title
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/src/components/todoList/index.jsx",
+                                    lineNumber: 39,
+                                    columnNumber: 19
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/todoList/index.jsx",
+                                lineNumber: 13,
+                                columnNumber: 15
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+                                className: "flex gap-1 justify-center items-center",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                        onClick: ()=>{
+                                            //在你点击按钮的那一刻，这个 <input /> 元素还没有被渲染成页面上的真实 DOM 节点，editInputRef.current 是 null。
+                                            // 要用useEffect.
+                                            // editInputRef.current.focus();
+                                            setEditedId(todo.id);
+                                            setNewEditedInput(todo.title);
+                                        },
+                                        className: "btn btn-square bg-white border-[#4E9CC0] h-8 w-8",
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                            xmlns: "http://www.w3.org/2000/svg",
+                                            height: "24px",
+                                            viewBox: "0 -960 960 960",
+                                            width: "24px",
+                                            fill: "#4E9CC0",
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                                d: "M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/components/todoList/index.jsx",
+                                                lineNumber: 85,
+                                                columnNumber: 21
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/components/todoList/index.jsx",
+                                            lineNumber: 78,
+                                            columnNumber: 19
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/todoList/index.jsx",
+                                        lineNumber: 68,
+                                        columnNumber: 17
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                        onClick: ()=>deleteOneCompleted(todo.id),
+                                        className: "btn btn-square  bg-white border-[#4E9CC0]  h-8 w-8",
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                            xmlns: "http://www.w3.org/2000/svg",
+                                            height: "24px",
+                                            viewBox: "0 -960 960 960",
+                                            width: "24px",
+                                            fill: "#4E9CC0",
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                                d: "m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/components/todoList/index.jsx",
+                                                lineNumber: 99,
+                                                columnNumber: 21
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/components/todoList/index.jsx",
+                                            lineNumber: 92,
+                                            columnNumber: 19
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/todoList/index.jsx",
+                                        lineNumber: 88,
+                                        columnNumber: 17
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/components/todoList/index.jsx",
+                                lineNumber: 67,
+                                columnNumber: 15
+                            }, this)
+                        ]
+                    }, todo.id, true, {
+                        fileName: "[project]/src/components/todoList/index.jsx",
+                        lineNumber: 9,
+                        columnNumber: 13
+                    }, this))
+            }, void 0, false, {
+                fileName: "[project]/src/components/todoList/index.jsx",
+                lineNumber: 7,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
+            fileName: "[project]/src/components/todoList/index.jsx",
+            lineNumber: 6,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "[project]/src/components/todoList/index.jsx",
+        lineNumber: 5,
+        columnNumber: 5
+    }, this);
 };
 _c = TodoList;
 const __TURBOPACK__default__export__ = TodoList;
@@ -661,59 +821,10 @@ __turbopack_context__.s({
     "default": (()=>Home)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react/jsx-dev-runtime.js [client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$todo$2f$index$2e$jsx__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/todo/index.jsx [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$todoList$2f$index$2e$jsx__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/todoList/index.jsx [client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react/index.js [client] (ecmascript)");
-;
-var _s = __turbopack_context__.k.signature();
-;
 ;
 ;
 function Home() {
-    _s();
-    const [todos, setTodos] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])([]);
-    const [input, setInput] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])("");
-    const handleAddTodo = (e)=>{
-        e.preventDefault();
-        if (input.length == 0) {
-            alert("Input cannot be empty.");
-            return;
-        }
-        const newTask = {
-            id: Date.now(),
-            title: input,
-            completed: false
-        };
-        setTodos((prevTodos)=>[
-                ...prevTodos,
-                newTask
-            ]);
-        setInput("");
-    };
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useEffect"])({
-        "Home.useEffect": ()=>{
-            const getTodoList = {
-                "Home.useEffect.getTodoList": async ()=>{
-                    const url = "https://jsonplaceholder.typicode.com/todos";
-                    // const url = "/todoList.json";
-                    try {
-                        const response = await fetch(url);
-                        const data = await response.json();
-                        setTodos(data);
-                    } catch (error) {
-                        console.error(error);
-                    }
-                }
-            }["Home.useEffect.getTodoList"];
-            getTodoList();
-        }
-    }["Home.useEffect"], []);
-    const toggleCompleted = (id)=>{
-        setTodos((prevTodos)=>prevTodos.map((todo)=>todo.id === id ? {
-                    ...todo,
-                    completed: !todo.completed
-                } : todo));
-    };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
         className: "bg-[#4E9CC0] h-screen m-0 p-0 flex flex-col",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -724,173 +835,21 @@ function Home() {
                     children: "TODOLIST"
                 }, void 0, false, {
                     fileName: "[project]/src/pages/index.jsx",
-                    lineNumber: 50,
+                    lineNumber: 7,
                     columnNumber: 9
                 }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
-                    onSubmit: handleAddTodo,
-                    className: "flex justify-between items-center gap-2 w-85 md:w-170 ",
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                            value: input,
-                            onChange: (e)=>setInput(e.target.value),
-                            type: "text",
-                            className: "border-[#4E9CC0] border-1 text-center w-150 h-10 text-[#4E9CC0]",
-                            placeholder: "What needs to be done?"
-                        }, void 0, false, {
-                            fileName: "[project]/src/pages/index.jsx",
-                            lineNumber: 55,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                            className: "btn btn-square",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                className: "bg-[#4E9CC0]",
-                                xmlns: "http://www.w3.org/2000/svg",
-                                height: "40px",
-                                viewBox: "0 -960 960 960",
-                                width: "40px",
-                                fill: "white",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                    d: "M450-450H200v-60h250v-250h60v250h250v60H510v250h-60v-250Z"
-                                }, void 0, false, {
-                                    fileName: "[project]/src/pages/index.jsx",
-                                    lineNumber: 71,
-                                    columnNumber: 15
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "[project]/src/pages/index.jsx",
-                                lineNumber: 63,
-                                columnNumber: 13
-                            }, this)
-                        }, void 0, false, {
-                            fileName: "[project]/src/pages/index.jsx",
-                            lineNumber: 62,
-                            columnNumber: 11
-                        }, this)
-                    ]
-                }, void 0, true, {
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(InputTodo, {}, void 0, false, {
                     fileName: "[project]/src/pages/index.jsx",
-                    lineNumber: 51,
+                    lineNumber: 9,
                     columnNumber: 9
                 }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                    className: "carousel carousel-vertical rounded-box h-96 overflow-y-auto",
-                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                        className: "flex flex-col  carousel-item h-auto",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                            className: "flex flex-col m-0.5 w-85 md:w-170",
-                            children: todos.map((todo)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                                    className: "flex justify-between items-center",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                                            className: "flex",
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                                className: `${todo.completed ? "line-through" : ""} text-[#4E9CC0] text-[1rem] md:text-[2rem]`,
-                                                children: [
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                                        type: "checkbox",
-                                                        checked: todo.completed,
-                                                        className: "checkbox border-[#4E9CC0] bg-white checked:bg-[#4E9CC0] checked:text-white checked:border-white m-[0.4rem] ",
-                                                        onChange: ()=>toggleCompleted(todo.id)
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/pages/index.jsx",
-                                                        lineNumber: 91,
-                                                        columnNumber: 23
-                                                    }, this),
-                                                    todo.title
-                                                ]
-                                            }, void 0, true, {
-                                                fileName: "[project]/src/pages/index.jsx",
-                                                lineNumber: 86,
-                                                columnNumber: 21
-                                            }, this)
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/pages/index.jsx",
-                                            lineNumber: 85,
-                                            columnNumber: 19
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                                            className: "flex gap-1 justify-center items-center",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                    className: "btn btn-square bg-white border-[#4E9CC0] h-8 w-8",
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                                        xmlns: "http://www.w3.org/2000/svg",
-                                                        height: "24px",
-                                                        viewBox: "0 -960 960 960",
-                                                        width: "24px",
-                                                        fill: "#4E9CC0",
-                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                                            d: "M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z"
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/src/pages/index.jsx",
-                                                            lineNumber: 109,
-                                                            columnNumber: 25
-                                                        }, this)
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/pages/index.jsx",
-                                                        lineNumber: 102,
-                                                        columnNumber: 23
-                                                    }, this)
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/pages/index.jsx",
-                                                    lineNumber: 101,
-                                                    columnNumber: 21
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                    className: "btn btn-square  bg-white border-[#4E9CC0]  h-8 w-8",
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                                        xmlns: "http://www.w3.org/2000/svg",
-                                                        height: "24px",
-                                                        viewBox: "0 -960 960 960",
-                                                        width: "24px",
-                                                        fill: "#4E9CC0",
-                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                                            d: "m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/src/pages/index.jsx",
-                                                            lineNumber: 120,
-                                                            columnNumber: 25
-                                                        }, this)
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/pages/index.jsx",
-                                                        lineNumber: 113,
-                                                        columnNumber: 23
-                                                    }, this)
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/pages/index.jsx",
-                                                    lineNumber: 112,
-                                                    columnNumber: 21
-                                                }, this)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/src/pages/index.jsx",
-                                            lineNumber: 100,
-                                            columnNumber: 19
-                                        }, this)
-                                    ]
-                                }, todo.id, true, {
-                                    fileName: "[project]/src/pages/index.jsx",
-                                    lineNumber: 81,
-                                    columnNumber: 17
-                                }, this))
-                        }, void 0, false, {
-                            fileName: "[project]/src/pages/index.jsx",
-                            lineNumber: 79,
-                            columnNumber: 13
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/src/pages/index.jsx",
-                        lineNumber: 78,
-                        columnNumber: 11
-                    }, this)
-                }, void 0, false, {
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$todoList$2f$index$2e$jsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/src/pages/index.jsx",
-                    lineNumber: 77,
+                    lineNumber: 12,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                    onClick: deleteAllCompleted,
                     className: "btn btn-wide text-white bg-[#4E9CC0] m-5",
                     children: [
                         "Remove checked",
@@ -904,33 +863,32 @@ function Home() {
                                 d: "m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
                             }, void 0, false, {
                                 fileName: "[project]/src/pages/index.jsx",
-                                lineNumber: 139,
+                                lineNumber: 26,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/pages/index.jsx",
-                            lineNumber: 132,
+                            lineNumber: 19,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/pages/index.jsx",
-                    lineNumber: 130,
+                    lineNumber: 14,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/pages/index.jsx",
-            lineNumber: 49,
+            lineNumber: 6,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/pages/index.jsx",
-        lineNumber: 48,
+        lineNumber: 5,
         columnNumber: 5
     }, this);
 }
-_s(Home, "aBuT34JNwd8LyXTQ9WrzrPbS1yI=");
 _c = Home;
 var _c;
 __turbopack_context__.k.register(_c, "Home");
